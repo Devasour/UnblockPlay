@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Submit a Game - GameSprout</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .submit-container { max-width: 500px; margin: 40px auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px #0002; padding: 2em; }
+    .submit-container h1 { margin-bottom: 0.7em; }
+    .form-field { margin-bottom: 1.3em; }
+    label { display: block; margin-bottom: 0.4em; font-weight: 600; }
+    input, textarea { width: 100%; padding: 0.7em; border-radius: 6px; border: 1px solid #ccc; }
+    .submit-btn { background: #4299e1; color: #fff; border: none; padding: 12px 26px; border-radius: 8px; font-weight: 600; cursor: pointer; transition: background 0.14s; }
+    .submit-btn:hover { background: #2b6cb0; }
+    .success { color: #249f2c; margin-bottom: 1em; }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" style="display:flex;align-items:center;gap:8px;">
+      <img src="images/logo.svg" alt="GameSprout Logo" class="logo">
+      <span class="brand">GameSprout</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="categories.html">Categories</a>
+      <a href="favorites.html">Favorites</a>
+      <a href="submit.html">Submit a Game</a>
+      <a href="requests.html">Requests</a>
+    </div>
+  </nav>
+  <main>
+    <div class="submit-container">
+      <h1>Submit a Game</h1>
+      <div id="msg"></div>
+      <form id="submitGameForm" autocomplete="off">
+        <div class="form-field">
+          <label for="gameName">Game Name*</label>
+          <input type="text" id="gameName" name="gameName" required maxlength="50">
+        </div>
+        <div class="form-field">
+          <label for="gameLink">Game Link / URL*</label>
+          <input type="url" id="gameLink" name="gameLink" required placeholder="https://example.com/game">
+        </div>
+        <div class="form-field">
+          <label for="why">Why do you want this game? (Optional)</label>
+          <textarea id="why" name="why" rows="3" maxlength="200"></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Submit Request</button>
+      </form>
+    </div>
+  </main>
+  <script>
+    // Save request to localStorage
+    document.getElementById("submitGameForm").onsubmit = function(e) {
+      e.preventDefault();
+      const name = document.getElementById("gameName").value.trim();
+      const link = document.getElementById("gameLink").value.trim();
+      const why = document.getElementById("why").value.trim();
+      const request = {
+        name, link, why, date: new Date().toISOString()
+      };
+      let requests = JSON.parse(localStorage.getItem("gameRequests") || "[]");
+      requests.push(request);
+      localStorage.setItem("gameRequests", JSON.stringify(requests));
+      document.getElementById("msg").innerHTML = `<div class="success">Thank you! Your request has been added.</div>`;
+      this.reset();
+    };
+  </script>
+</body>
+</html>
