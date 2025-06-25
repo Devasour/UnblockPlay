@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Categories - GameSprout</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <script>
+    fetch('navbar.html').then(r=>r.text()).then(t=>{document.body.insertAdjacentHTML("afterbegin",t)});
+  </script>
+  <main style="max-width:700px;margin:40px auto;padding:0 20px;">
+    <h1>Categories</h1>
+    <ul>
+      <li><a href="#action">Action</a></li>
+      <li><a href="#puzzle">Puzzle</a></li>
+      <li><a href="#adventure">Adventure</a></li>
+      <li><a href="#multiplayer">Multiplayer</a></li>
+      <li><a href="#sports">Sports</a></li>
+    </ul>
+    <p style="margin-top:40px;">(You can add real categories and games as you grow!)</p>
+  </main>
+</body>
+</html>
