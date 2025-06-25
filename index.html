@@ -7,21 +7,19 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- NAVBAR -->
-  <!--#include file="navbar.html" -->
-  <script>
-   <nav class="navbar">
-  <a href="index.html" style="display:flex;align-items:center;gap:8px;">
-    <img src="images/logo.svg" alt="GameSprout Logo" class="logo">
-    <span class="brand">GameSprout</span>
-  </a>
-  <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="categories.html">Categories</a>
-    <a href="favorites.html">Favorites</a>
-    <a href="submit.html">Submit a Game</a>
-  </div>
-</nav>
+  <nav class="navbar">
+    <a href="index.html" style="display:flex;align-items:center;gap:8px;">
+      <img src="images/logo.svg" alt="GameSprout Logo" class="logo">
+      <span class="brand">GameSprout</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="categories.html">Categories</a>
+      <a href="favorites.html">Favorites</a>
+      <a href="submit.html">Submit a Game</a>
+    </div>
+  </nav>
+
   <header class="hero">
     <h1>Play Unblocked Games Anywhere, Anytime!</h1>
     <p>The best HTML5 games — fast, free, and always accessible.</p>
@@ -31,12 +29,14 @@
     <section id="featured" class="featured-section">
       <h2>Featured Games</h2>
       <div class="game-grid">
+        <!-- 2048 game as Super Jump Bros -->
         <div class="game-card">
-          <img src="images/super-jump-bros.png" alt="Super Jump Bros">
-          <h3>Super Jump Bros</h3>
-          <p>A classic platformer adventure. Jump, run, and collect coins!</p>
-          <a href="super-jump-bros.html" class="play-btn">Play Now →</a>
+          <img src="images/2048.png" alt="2048">
+          <h3>2048</h3>
+          <p>Join the numbers and get to the 2048 tile!</p>
+          <a href="2048.html" class="play-btn">Play Now →</a>
         </div>
+        <!-- These are placeholder games, you can update or remove them if you wish -->
         <div class="game-card">
           <img src="images/puzzle-master.png" alt="Puzzle Master">
           <h3>Puzzle Master</h3>
@@ -68,6 +68,8 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+</body>
+</html>
 </body>
 </html>
 <a href="2048.html" class="play-btn">Play Now →</a>
