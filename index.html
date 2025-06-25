@@ -7,16 +7,12 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav class="navbar">
-    <img src="images/logo.png" alt="GameSprout Logo" class="logo">
-    <span class="brand">GameSprout</span>
-    <div class="nav-links">
-      <a href="#">Home</a>
-      <a href="#">Categories</a>
-      <a href="#">Favorites</a>
-      <a href="#">Submit a Game</a>
-    </div>
-  </nav>
+  <!-- NAVBAR -->
+  <!--#include file="navbar.html" -->
+  <script>
+    fetch('navbar.html').then(r=>r.text()).then(t=>{document.body.insertAdjacentHTML("afterbegin",t)});
+  </script>
+
   <header class="hero">
     <h1>Play Unblocked Games Anywhere, Anytime!</h1>
     <p>The best HTML5 games — fast, free, and always accessible.</p>
@@ -30,30 +26,30 @@
           <img src="images/super-jump-bros.png" alt="Super Jump Bros">
           <h3>Super Jump Bros</h3>
           <p>A classic platformer adventure. Jump, run, and collect coins!</p>
-          <a href="#" class="play-btn">Play Now →</a>
+          <a href="super-jump-bros.html" class="play-btn">Play Now →</a>
         </div>
         <div class="game-card">
           <img src="images/puzzle-master.png" alt="Puzzle Master">
           <h3>Puzzle Master</h3>
           <p>Test your brain with mind-bending puzzles.</p>
-          <a href="#" class="play-btn">Play Now →</a>
+          <a href="puzzle-master.html" class="play-btn">Play Now →</a>
         </div>
         <div class="game-card">
           <img src="images/racing-rush.png" alt="Racing Rush">
           <h3>Racing Rush</h3>
           <p>High-speed racing action. Can you beat the leaderboard?</p>
-          <a href="#" class="play-btn">Play Now →</a>
+          <a href="racing-rush.html" class="play-btn">Play Now →</a>
         </div>
       </div>
     </section>
     <section class="category-section">
       <h2>Browse by Category</h2>
       <div class="categories">
-        <a href="#" class="category">⚡ Action</a>
-        <a href="#" class="category">🧩 Puzzle</a>
-        <a href="#" class="category">🌍 Adventure</a>
-        <a href="#" class="category">👾 Multiplayer</a>
-        <a href="#" class="category">🏀 Sports</a>
+        <a href="categories.html#action" class="category">⚡ Action</a>
+        <a href="categories.html#puzzle" class="category">🧩 Puzzle</a>
+        <a href="categories.html#adventure" class="category">🌍 Adventure</a>
+        <a href="categories.html#multiplayer" class="category">👾 Multiplayer</a>
+        <a href="categories.html#sports" class="category">🏀 Sports</a>
       </div>
     </section>
   </main>
