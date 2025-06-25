@@ -18,8 +18,18 @@
 <body>
   <!-- NAVBAR -->
   <script>
-    fetch('navbar.html').then(r=>r.text()).then(t=>{document.body.insertAdjacentHTML("afterbegin",t)});
-  </script>
+  <nav class="navbar">
+  <a href="index.html" style="display:flex;align-items:center;gap:8px;">
+    <img src="images/logo.svg" alt="GameSprout Logo" class="logo">
+    <span class="brand">GameSprout</span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="categories.html">Categories</a>
+    <a href="favorites.html">Favorites</a>
+    <a href="submit.html">Submit a Game</a>
+  </div>
+</nav>
   <main style="max-width:900px;margin:50px auto 0 auto;padding:0 20px;">
     <h1 style="text-align:center;">Super Jump Bros</h1>
     <p style="text-align:center;">A classic platformer adventure. Jump, run, and collect coins!</p>
