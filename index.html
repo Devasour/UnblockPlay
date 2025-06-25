@@ -10,9 +10,18 @@
   <!-- NAVBAR -->
   <!--#include file="navbar.html" -->
   <script>
-    fetch('navbar.html').then(r=>r.text()).then(t=>{document.body.insertAdjacentHTML("afterbegin",t)});
-  </script>
-
+   <nav class="navbar">
+  <a href="index.html" style="display:flex;align-items:center;gap:8px;">
+    <img src="images/logo.svg" alt="GameSprout Logo" class="logo">
+    <span class="brand">GameSprout</span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="categories.html">Categories</a>
+    <a href="favorites.html">Favorites</a>
+    <a href="submit.html">Submit a Game</a>
+  </div>
+</nav>
   <header class="hero">
     <h1>Play Unblocked Games Anywhere, Anytime!</h1>
     <p>The best HTML5 games — fast, free, and always accessible.</p>
