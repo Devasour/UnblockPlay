@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Venge.io - GameSprout</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .game-container { max-width: 900px; margin: 40px auto; text-align: center; }
+    .game-iframe { width: 100%; min-height: 620px; border: none; border-radius: 16px; }
+    @media (max-width: 700px) { .game-iframe { min-height: 68vw; } }
+    .fullscreen-btn { margin: 20px 0; background:#4299e1; color:#fff; border:none; padding:10px 22px; border-radius:8px; font-weight:600; cursor:pointer; transition:background 0.14s;}
+    .fullscreen-btn:hover { background:#2b6cb0;}
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" style="display:flex;align-items:center;gap:8px;">
+      <img src="images/logo.svg" alt="GameSprout Logo" class="logo">
+      <span class="brand">GameSprout</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="categories.html">Categories</a>
+      <a href="favorites.html">Favorites</a>
+      <a href="submit.html">Submit a Game</a>
+      <a href="requests.html">Requests</a>
+    </div>
+  </nav>
+  <main class="game-container">
+    <h1>Venge.io</h1>
+    <p>Compete in fast-paced multiplayer shooter battles with unique abilities!</p>
+    <button class="fullscreen-btn" onclick="goFullscreen()">Fullscreen</button>
+    <iframe class="game-iframe" id="gameframe" src="https://venge.io/" allowfullscreen></iframe>
+    <div style="margin:2em 0;">
+      <a href="index.html" style="color:#4299e1;">← Back to Home</a>
+    </div>
+  </main>
+  <script>
+    function goFullscreen() {
+      const iframe = document.getElementById('gameframe');
+      if (iframe.requestFullscreen) iframe.requestFullscreen();
+      else if (iframe.mozRequestFullScreen) iframe.mozRequestFullScreen();
+      else if (iframe.webkitRequestFullscreen) iframe.webkitRequestFullscreen();
+      else if (iframe.msRequestFullscreen) iframe.msRequestFullscreen();
+    }
+  </script>
+</body>
+</html>
