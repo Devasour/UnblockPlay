@@ -3,32 +3,117 @@
 <head>
   <meta charset="UTF-8">
   <title>Categories - GameSprout</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
+  <style>
+    .category-list { max-width: 900px; margin: 40px auto; }
+    .category-title { font-size: 2em; margin: 1.5em 0 0.5em 0; }
+    .game-grid { display: flex; flex-wrap: wrap; gap: 24px; }
+    .game-card { flex: 1 1 260px; max-width: 260px; background: #f9f9f9; border-radius: 12px; padding: 16px; text-align: center; box-shadow: 0 2px 8px #0001; }
+    .game-card img { width: 100%; border-radius: 8px; }
+    .game-card h3 { margin: 0.7em 0 0.2em 0; }
+    .game-card p { font-size: 1em; color: #555; }
+    .category-nav { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 2em; }
+    .category-nav a { background: #4299e1; color: #fff; padding: 8px 18px; border-radius: 8px; font-weight: 600; text-decoration: none; transition: background 0.14s;}
+    .category-nav a:hover { background: #2563eb; }
+  </style>
 </head>
 <body>
-  <script>
   <nav class="navbar">
-  <a href="index.html" style="display:flex;align-items:center;gap:8px;">
-    <img src="images/logo.svg" alt="GameSprout Logo" class="logo">
-    <span class="brand">GameSprout</span>
-  </a>
-  <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="categories.html">Categories</a>
-    <a href="favorites.html">Favorites</a>
-    <a href="submit.html">Submit a Game</a>
-  </div>
-</nav>
-  <main style="max-width:700px;margin:40px auto;padding:0 20px;">
-    <h1>Categories</h1>
-    <ul>
-      <li><a href="#action">Action</a></li>
-      <li><a href="#puzzle">Puzzle</a></li>
-      <li><a href="#adventure">Adventure</a></li>
-      <li><a href="#multiplayer">Multiplayer</a></li>
-      <li><a href="#sports">Sports</a></li>
-    </ul>
-    <p style="margin-top:40px;">(You can add real categories and games as you grow!)</p>
+    <a href="index.html" style="display:flex;align-items:center;gap:8px;">
+      <img src="images/logo.svg" alt="GameSprout Logo" class="logo">
+      <span class="brand">GameSprout</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="categories.html">Categories</a>
+      <a href="favorites.html">Favorites</a>
+      <a href="submit.html">Submit a Game</a>
+      <a href="requests.html">Requests</a>
+    </div>
+  </nav>
+  <main class="category-list">
+    <h1>Browse by Category</h1>
+    <div class="category-nav">
+      <a href="#action">⚡ Action</a>
+      <a href="#puzzle">🧩 Puzzle</a>
+      <a href="#adventure">🌍 Adventure</a>
+      <a href="#multiplayer">👾 Multiplayer</a>
+      <a href="#sports">🏀 Sports</a>
+    </div>
+
+    <!-- Action Category -->
+    <a id="action"></a>
+    <div class="category-title">⚡ Action</div>
+    <div class="game-grid">
+      <div class="game-card">
+        <img src="images/1v1lol.png" alt="1v1.lol">
+        <h3>1v1.lol</h3>
+        <p>Battle it out in this fast-paced online shooter!</p>
+        <a href="1v1lol.html" class="play-btn">Play Now →</a>
+      </div>
+      <div class="game-card">
+        <img src="images/smashkarts.png" alt="Smash Karts">
+        <h3>Smash Karts</h3>
+        <p>Race and battle other players in this fast-paced kart arena game!</p>
+        <a href="smashkarts.html" class="play-btn">Play Now →</a>
+      </div>
+    </div>
+
+    <!-- Puzzle Category -->
+    <a id="puzzle"></a>
+    <div class="category-title">🧩 Puzzle</div>
+    <div class="game-grid">
+      <div class="game-card">
+        <img src="images/survivalrace2.png" alt="Survival Race 2">
+        <h3>Survival Race 2</h3>
+        <p>Test your skills in this fast-paced racing game!</p>
+        <a href="survivalrace2.html" class="play-btn">Play Now →</a>
+      </div>
+    </div>
+
+    <!-- Adventure Category -->
+    <a id="adventure"></a>
+    <div class="category-title">🌍 Adventure</div>
+    <div class="game-grid">
+      <div class="game-card">
+        <img src="images/babyinyellow.png" alt="The Baby in Yellow">
+        <h3>The Baby in Yellow</h3>
+        <p>Take care of a mysterious baby in this unsettling horror game!</p>
+        <a href="babyinyellow.html" class="play-btn">Play Now →</a>
+      </div>
+    </div>
+
+    <!-- Multiplayer Category -->
+    <a id="multiplayer"></a>
+    <div class="category-title">👾 Multiplayer</div>
+    <div class="game-grid">
+      <div class="game-card">
+        <img src="images/1v1lol.png" alt="1v1.lol">
+        <h3>1v1.lol</h3>
+        <p>Battle it out in this fast-paced online shooter!</p>
+        <a href="1v1lol.html" class="play-btn">Play Now →</a>
+      </div>
+      <div class="game-card">
+        <img src="images/smashkarts.png" alt="Smash Karts">
+        <h3>Smash Karts</h3>
+        <p>Race and battle other players in this fast-paced kart arena game!</p>
+        <a href="smashkarts.html" class="play-btn">Play Now →</a>
+      </div>
+    </div>
+
+    <!-- Sports Category -->
+    <a id="sports"></a>
+    <div class="category-title">🏀 Sports</div>
+    <div class="game-grid">
+      <!-- Add sports games here -->
+    </div>
   </main>
+  <footer>
+    &copy; <span id="year"></span> GameSprout — Play free unblocked games!
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
